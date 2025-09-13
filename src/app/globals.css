@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-roboto-flex), Arial, Helvetica, sans-serif;
+
+  --font-black-slanted: var(--font-roboto-flex);
+  --font-black-slanted--font-variation-settings:
+    "wdth" var(--wdth, 100), "slnt" var(--slnt, -10), "opsz" var(--opsz, 144),
+    "wght" var(--wght, 1000);
+
+  --font-bold-slanted: var(--font-roboto-flex);
+  --font-bold-slanted--font-variation-settings:
+    "wdth" var(--wdth, 74), "slnt" var(--slnt, -10), "opsz" var(--opsz, 100),
+    "wght" var(--wght, 600);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-marquee {
+  animation-name: marquee;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+.blue-gradient-bg {
+  background: linear-gradient(to bottom, #000000, #0f172a, #062f4a, #7fa0b9);
+}
+
+
+/* globals.css */
+
+/* Base Roboto Flex */
+.font-roboto {
+  font-family: var(--font-roboto-flex);
+}
+
+/* Bold */
+.font-bold {
+  font-weight: 700;
+}
+
+/* Extra black weight */
+.font-black {
+  font-weight: 900;
+}
+
+/* Slanted (italic-ish) */
+.font-slanted {
+  font-family: var(--font-roboto-flex);
+  font-weight: 1200;       /* lighter = slant more visible */
+  font-style: oblique 15deg; 
+  font-variation-settings: "slnt" -15;
+}
+
+
+/* Wider version */
+.font-wide {
+  font-variation-settings: "wdth" 120; /* default is 100, higher = wider */
+}
+
+/* Optical size tweak */
+.font-opsz {
+  font-variation-settings: "opsz" 14; /* smaller number = better for small text */
 }

@@ -1,0 +1,36 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Stone"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Cillum ad occaecat id fugiat aliquip ea incididunt nisi in labore magna laborum non. Amet amet sit officia laboris cupidatat do esse nulla incididunt velit. Officia id enim labore occaecat nulla."
+						}
+					}
+				]
+			},
+			"buy_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "sun",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

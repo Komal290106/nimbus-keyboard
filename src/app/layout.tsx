@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const robotoFlex = Roboto_Flex({
+  variable: "--font-roboto-flex",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  axes: ["wdth", "slnt", "opsz"],
 });
 
 export const metadata: Metadata = {
@@ -24,11 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${robotoFlex.variable} antialiased`}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }
