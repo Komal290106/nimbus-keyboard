@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nimbus Keyboards – Vapor75 Website
 
-## Getting Started
+A premium landing page and product showcase for the Nimbus Vapor75 Mechanical Keyboard, built with Next.js, TypeScript, Tailwind CSS, GSAP animations, Three.js 3D visuals, and Prismic Slice Machine CMS.
 
-First, run the development server:
+This project delivers a sleek, modern, and animated user experience optimized for performance and scalability.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Framework: Next.js 15
+ with TypeScript
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Styling: Tailwind CSS v4
+ + custom utilities
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Animations: GSAP
+ + @gsap/react
 
-## Learn More
+4. 3D Graphics: Three.js
+ + @react-three/fiber
+ + @react-three/drei
 
-To learn more about Next.js, take a look at the following resources:
+5. Icons: Lucide React
+ + React Icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. CMS: Prismic
+ with Slice Machine
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ScreenShot
+<img width="1892" height="863" alt="Screenshot 2025-09-14 014253" src="https://github.com/user-attachments/assets/bf4bc274-f9af-48fa-8fbc-7ebe9311b859" />
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Content Management with Slice Machine
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. This project uses Prismic Slice Machine for content modeling:
+
+2. Each section (Hero, Features, Product Grid, Footer, etc.) is built as a Slice.
+
+3. Editors can create or rearrange pages visually in Prismic without developer involvement.
+
+5. Fully integrated with Next.js App Router via @prismicio/next.
+
+## Run Slice Machine
+npm run slicemachine
+
+
+1. Define new slices in /slices
+
+2. Sync slices with Prismic CMS
+
+3. Render with @prismicio/react
+
+## Features
+
+1.Premium dark gradient UI with glassy effects
+
+2.Responsive design across desktop & mobile
+
+3.Animated hero section with GSAP transitions
+
+4.3D gradient backgrounds powered by Three.js
+
+5.Interactive product playgrounds (switch & keycap selector)
+
+6.Slice-based CMS for scalable content management
+
+7.Smooth purchase flow with Stripe integration
+
