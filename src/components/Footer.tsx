@@ -43,10 +43,10 @@ export function Footer() {
 
           {/* Right Section */}
           <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 md:justify-end">
-            <FooterLink href="/products">Products</FooterLink>
-            <FooterLink href="/about">About</FooterLink>
-            <FooterLink href="/support">Support</FooterLink>
-            <FooterLink href="/contact">Contact</FooterLink>
+            <FooterLink href="#">Products</FooterLink>
+            <FooterLink href="#">About</FooterLink>
+            <FooterLink href="#">Support</FooterLink>
+            <FooterLink href="#">Contact</FooterLink>
           </nav>
         </div>
       </Bounded>
